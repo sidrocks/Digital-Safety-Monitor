@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Parent Registration</title>
+  <link rel="stylesheet" href="registration.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Parent Registration</h1>
+    <p>Sign in with your Google account to manage digital safety settings.</p>
+    <button id="signInButton">Sign in with Google</button>
+
+    <div id="pinSetup" style="display:none;">
+      <h2>Set a PIN</h2>
+      <label for="newPin">New PIN (4-digit):</label>
+      <input type="password" id="newPin" maxlength="4" pattern="[0-9]{4}" placeholder="e.g., 1234">
+      <label for="confirmPin">Confirm PIN:</label>
+      <input type="password" id="confirmPin" maxlength="4" pattern="[0-9]{4}" placeholder="e.g., 1234">
+      <button id="setPinButton">Set PIN</button>
+      <p id="pinStatusMessage" style="color: red;"></p>
+    </div>
+
+    <div id="pinVerification" style="display:none;">
+      <h2>Enter PIN</h2>
+      <label for="verifyPin">PIN:</label>
+      <input type="password" id="verifyPin" maxlength="4" pattern="[0-9]{4}" placeholder="e.g., 1234">
+      <button id="verifyPinButton">Verify PIN</button>
+      <p id="verifyPinStatusMessage" style="color: red;"></p>
+    </div>
+
+    <div id="registrationForm" style="display:none;">
+      <h2>Welcome, <span id="parentEmail"></span>!</h2>
+      <label for="childEmail">Child's Gmail ID:</label>
+      <input type="email" id="childEmail" placeholder="child@gmail.com">
+      <button id="addChildButton">Add Child</button>
+      <ul id="childList"></ul>
+
+      <label for="restrictedUrl">Restricted URL:</label>
+      <input type="text" id="restrictedUrl" placeholder="e.g., youtube.com">
+      <button id="addUrlButton">Add URL</button>
+      <ul id="urlList"></ul>
+
+      <label for="blockedMessage">Message to Child (when blocked):</label>
+      <textarea id="blockedMessage" rows="4" placeholder="This site is blocked by your parent."></textarea>
+
+      <button id="saveSettingsButton">Save Settings</button>
+      <p id="statusMessage"></p>
+    </div>
+  </div>
+  <script src="registration.js"></script>
+</body>
+</html>

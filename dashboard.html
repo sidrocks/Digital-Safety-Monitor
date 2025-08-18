@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Child Browsing Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Child Browsing Dashboard</h1>
+    <p>View and manage browsing history for your registered children.</p>
+
+    <div id="authSection">
+      <p>Please sign in with your parent Google account to view the dashboard.</p>
+      <button id="signInButton">Sign in with Google</button>
+    </div>
+
+    <div id="pinVerificationDashboard" style="display:none;">
+      <h2>Enter PIN to View Dashboard</h2>
+      <label for="verifyPinDashboard">PIN:</label>
+      <input type="password" id="verifyPinDashboard" maxlength="4" pattern="[0-9]{4}" placeholder="e.g., 1234">
+      <button id="verifyPinButtonDashboard">Verify PIN</button>
+      <p id="verifyPinStatusMessageDashboard" style="color: red;"></p>
+    </div>
+
+    <div id="dashboardContent" style="display:none;">
+      <h2>History for: <span id="currentParentEmail"></span></h2>
+
+      <div class="controls">
+        <button id="clearHistoryButton">Clear History</button>
+        <button id="saveHistoryButton">Save History</button>
+      </div>
+
+      <div id="historyListContainer">
+        <ul id="historyList"></ul>
+      </div>
+
+      <p id="statusMessage"></p>
+    </div>
+  </div>
+  <script src="dashboard.js"></script>
+</body>
+</html>
