@@ -1,81 +1,152 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Professional font */
+  background-color: #f0f2f5; /* Light, neutral background */
   margin: 0;
   padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
 }
 
 .container {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
-  margin: 0 auto;
+  background-color: #ffffff; /* Clean white */
+  padding: 30px;
+  border-radius: 8px; /* Professional rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Professional subtle shadow */
+  max-width: 650px; /* Adjusted max-width for registration form */
+  width: 100%;
+  box-sizing: border-box;
 }
 
-h1, h2 {
-  color: #333;
+h1 {
+  color: #334e68; /* Deep blue/gray for primary heading */
+  font-size: 2.2em;
+  margin-bottom: 15px;
+  text-align: left; /* Left align title */
+  font-weight: 700;
+}
+
+h2 {
+  color: #526c8a; /* Muted blue for sub-heading */
+  font-size: 1.6em;
+  margin-bottom: 20px;
+  text-align: left; /* Left align sub-heading */
+  font-weight: 500;
+}
+
+p {
+  color: #66788a;
+  text-align: left; /* Left align paragraph */
+  margin-bottom: 25px;
 }
 
 label {
   display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
+  margin-bottom: 8px; /* More space for labels */
+  font-weight: 600; /* Bolder labels */
+  color: #4a5568;
+  font-size: 0.95em;
 }
 
 input[type="email"],
 input[type="text"],
+input[type="password"],
 textarea {
-  width: calc(100% - 22px);
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  width: calc(100% - 28px); /* Adjust width for new padding/border */
+  padding: 10px 14px; /* More padding */
+  margin-bottom: 15px; /* More margin */
+  border: 1px solid #c9d6de; /* Softer, professional border */
+  border-radius: 6px; /* Less rounded */
+  background-color: #ffffff;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-size: 1em;
+}
+
+input[type="email"]:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  border-color: #007bff; /* Primary blue focus */
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+  outline: none;
 }
 
 button {
-  background-color: #007bff;
+  background-color: #007bff; /* Primary blue */
   color: white;
-  padding: 10px 15px;
+  padding: 10px 22px; /* Consistent padding with dashboard */
   border: none;
-  border-radius: 4px;
+  border-radius: 6px; /* Consistent rounded corners */
   cursor: pointer;
-  margin-bottom: 10px;
+  font-size: 1em;
+  font-weight: 600;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); /* Consistent shadow */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease;
+  display: inline-block; /* Natural text button flow */
+  margin-right: 10px; /* Space between buttons */
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #0056b3; /* Darker blue on hover */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
 }
 
 ul {
   list-style-type: none;
   padding: 0;
-  margin-bottom: 10px;
+  margin-bottom: 20px; /* More space */
 }
 
 ul li {
-  background-color: #e9e9e9;
-  padding: 8px;
-  margin-bottom: 5px;
-  border-radius: 4px;
+  background-color: #f8fafd; /* Lighter background for list items */
+  padding: 10px 15px; /* More padding */
+  margin-bottom: 8px; /* Less space between items */
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* Subtle shadow */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: #4a5568; /* Darker text */
+  font-size: 0.95em;
 }
 
 ul li button {
-  background-color: #dc3545;
-  padding: 5px 10px;
+  background-color: #dc3545; /* Red for delete */
+  padding: 5px 10px; /* Smaller delete button */
   margin-bottom: 0;
+  box-shadow: none; /* No shadow for small buttons */
+  transform: none; /* No lift */
 }
 
 ul li button:hover {
   background-color: #c82333;
+  box-shadow: none;
+  transform: none;
 }
 
 #statusMessage {
-  margin-top: 10px;
-  font-weight: bold;
-  color: green;
+  margin-top: 20px; /* Consistent margin */
+  font-weight: 600;
+  color: #007bff; /* Primary accent color */
+  text-align: left;
+  font-size: 1.05em;
+}
+
+.url-file-actions {
+  margin-top: 20px; /* Space above the buttons */
+  margin-bottom: 25px; /* Space below the buttons, consistent with paragraphs */
+  display: flex;
+  gap: 15px; /* Space between the buttons */
+  align-items: center;
+}
+
+#addUrlButton {
+  margin-bottom: 20px; /* Adds space below the Add URL button */
 }

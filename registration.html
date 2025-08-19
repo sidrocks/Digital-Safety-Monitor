@@ -6,8 +6,11 @@
 </head>
 <body>
   <div class="container">
-    <h1>Parent Registration</h1>
-    <p>Sign in with your Google account to manage digital safety settings.</p>
+    <h1>Digital Safety Monitor</h1>
+    <h2>Parent Registration</h2>
+
+    <p>This page allows you to set up parental controls for the current Chrome profile.</p>
+
     <button id="signInButton">Sign in with Google</button>
 
     <div id="pinSetup" style="display:none;">
@@ -30,15 +33,20 @@
 
     <div id="registrationForm" style="display:none;">
       <h2>Welcome, <span id="parentEmail"></span>!</h2>
-      <label for="childEmail">Child's Gmail ID:</label>
-      <input type="email" id="childEmail" placeholder="child@gmail.com">
-      <button id="addChildButton">Add Child</button>
-      <ul id="childList"></ul>
+      <p>Configuring settings for Child: <span id="currentUserEmailDisplay" style="font-weight: bold; color: #007bff;"></span></p>
 
       <label for="restrictedUrl">Restricted URL:</label>
       <input type="text" id="restrictedUrl" placeholder="e.g., youtube.com">
       <button id="addUrlButton">Add URL</button>
-      <ul id="urlList"></ul>
+      <div id="urlListContainer" style="max-height: 200px; overflow-y: auto; border: 1px solid #c9d6de; border-radius: 6px; padding: 10px; margin-bottom: 20px;">
+        <ul id="urlList"></ul>
+      </div>
+
+      <div class="url-file-actions">
+        <button id="exportUrlsButton">Export URLs</button>
+        <input type="file" id="importUrlsFile" accept=".txt,.csv" style="display: none;" />
+        <button id="importUrlsButton">Import URLs</button>
+      </div>
 
       <label for="blockedMessage">Message to Child (when blocked):</label>
       <textarea id="blockedMessage" rows="4" placeholder="This site is blocked by your parent."></textarea>

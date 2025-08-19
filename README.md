@@ -4,14 +4,31 @@ This Chrome extension is designed to provide digital safety monitoring for child
 
 ## Features
 
-*   **Parental Registration:** Secure registration page accessible only to parents, authenticated via their Gmail ID. Requires a PIN for access to settings.
-*   **PIN Protection:** Secure access to parent registration and child browsing dashboard with a configurable 4-digit PIN.
-*   **Child Profile Management:** Parents can add child's Gmail IDs and specify restricted URLs. *Note: Settings are applied per Chrome user profile, meaning a parent must configure restrictions within each child's Chrome profile.*
-*   **Customizable Block Message:** Parents can set a custom message displayed to children when a restricted site is accessed.
-*   **Email Notifications:** (Placeholder) Parents receive email notifications when a child attempts to access a restricted site. Requires backend service for full functionality.
-*   **Browsing History Dashboard:** A dedicated dashboard for parents to view their child's browsing history. Requires PIN for access.
-*   **History Management:** Options to clear and save browsing history from the dashboard.
-*   **User-Based Access Control:** The extension differentiates between parent and child logins, applying restrictions only for registered children in *that specific Chrome profile*.
+-   **Parent Registration Page (New/Updated)**:
+    -   **Parent Gmail Authentication**: Secure login for parents using their Google account.
+    -   **PIN Protection**: Set and verify a 4-digit PIN to secure access to settings. The PIN setup option is hidden once a PIN is set, and the Google Sign-in button is hidden if a parent is already registered with a PIN.
+    -   **Per-Child-Profile Configuration**: Restricted URLs and custom messages are configured for the *currently logged-in Chrome user's Gmail ID (the child's profile)*. The child's Gmail ID is displayed as non-editable text.
+    -   **Restricted URLs Management**: Parents can add, view, and remove URLs to be blocked for the registered child. The list of restricted URLs is now scrollable.
+    -   **URL Export/Import**: Easily export your list of restricted URLs to a `.txt` or `.csv` file, and import URLs from such files, allowing for backup and quick setup across profiles.
+    -   **Custom Block Message**: Set a personalized message to be displayed to the child when a restricted site is accessed.
+
+-   **Child Browsing Monitoring (Updated)**:
+    -   **Site Blocking**: Automatically blocks access to URLs specified by the parent if the logged-in user is a registered child.
+    -   **Enhanced Blocked Page (New)**: When a site is blocked, a dedicated `blocked.html` page is displayed with the parent's custom message, a randomly selected fun message, and a visually engaging, professional yet fun dark theme. Includes a placeholder for a funny image (`images/funny_blocked.png` - *requires the user to add this image file*).
+
+-   **Child Browsing Dashboard (Updated)**:
+    -   **PIN Protected Access**: Dashboard access is protected by the same PIN set on the registration page.
+    -   **Comprehensive History**: Displays the browsing history (allowed and blocked sites) of the child user in a clear, fixed-width, scrollable table.
+    -   **Dynamic Grouping**: Logs are grouped by customizable time periods (e.g., Today, Last 7 Days, This Month, All Time), with group headers only appearing if there is data for that group. "Last 7 Days" is the default view.
+    -   **Search Functionality**: Search for specific URLs or keywords within the browsing history.
+    -   **Clickable URLs**: URLs in the history table are clickable and open in a new tab.
+    -   **URL Copy Option**: Truncated long URLs can be fully copied to the clipboard.
+    -   **Clear History**: Option to clear all browsing history data stored by the extension.
+    -   **Save History**: Option to save browsing history to a CSV file for external review.
+    -   **Professional Theme**: Applied a clean, professional visual theme for better readability and user experience.
+
+-   **User-Based Access Control**:
+    -   The extension intelligently identifies the logged-in Chrome user. If the user is a registered child, restrictions apply. If it's the parent, they can browse freely without restrictions (within their own profile) and access settings/dashboard.
 
 ## Getting Started
 

@@ -1,29 +1,64 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f8d7da;
-  color: #721c24;
+  font-family: 'Comfortaa', cursive, 'Comic Sans MS', sans-serif;
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%); /* Dark gradient background */
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   margin: 0;
+  color: #e2e8f0; /* Light text for contrast on dark background */
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .container {
-  background-color: #f5c6cb;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  text-align: center;
+  background-color: rgba(45, 55, 72, 0.95); /* Slightly lighter dark blue with transparency */
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Stronger shadow for depth */
   max-width: 500px;
+  width: 100%;
+  border: 3px solid #63b3ed; /* Accent border in a lighter blue */
+  transform: scale(0.98);
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: scale(1);
+}
+
+.illustration {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 25px;
+  filter: drop-shadow(0 5px 8px rgba(0, 0, 0, 0.2));
 }
 
 h1 {
-  color: #721c24;
+  font-size: 2.8em;
+  color: #f56565; /* A softer red for better contrast on dark */
   margin-bottom: 20px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); /* More pronounced shadow */
 }
 
-p {
-  font-size: 1.1em;
+.fun-message {
+  font-size: 1.4em;
+  color: #e2e8f0; /* Consistent light text */
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.blocked-message {
+  font-size: 1.2em;
+  color: #90cdf4; /* Lighter blue accent for blocked message */
+  margin-bottom: 30px;
   line-height: 1.6;
+}
+
+.footer-text {
+  font-size: 0.9em;
+  color: #a0aec0; /* Muted gray for footer */
+  margin-top: 20px;
 }

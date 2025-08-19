@@ -6,12 +6,21 @@
 </head>
 <body>
   <div class="container">
-    <h1>Child Browsing Dashboard</h1>
+    <h1>Digital Safety Monitor</h1>
+    <h2>Child Browsing Dashboard</h2>
     <p>View and manage browsing history for your registered children.</p>
 
-    <div id="authSection">
-      <p>Please sign in with your parent Google account to view the dashboard.</p>
-      <button id="signInButton">Sign in with Google</button>
+    <div class="filters-and-search" style="display:none;">
+      <div class="filter-group">
+        <label for="timeFilter">Time Period:</label>
+        <select id="timeFilter"><option value="all">All Time</option></select>
+      </div>
+      <div class="filter-group">
+        <label for="searchUrl">Search URL:</label>
+        <input type="text" id="searchUrl" placeholder="Partial URL search">
+      </div>
+      <button id="applyFiltersButton" title="Apply Filters">Apply</button>
+      <button id="resetFiltersButton" title="Reset Filters">Reset</button>
     </div>
 
     <div id="pinVerificationDashboard" style="display:none;">
@@ -26,8 +35,8 @@
       <h2>History for: <span id="currentParentEmail"></span></h2>
 
       <div class="controls">
-        <button id="clearHistoryButton">Clear History</button>
-        <button id="saveHistoryButton">Save History</button>
+        <button id="clearHistoryButton" title="Clear History">Clear</button>
+        <button id="saveHistoryButton" title="Save History">Save</button>
       </div>
 
       <div id="historyListContainer">
