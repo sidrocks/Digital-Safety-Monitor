@@ -4,7 +4,7 @@ This Chrome extension is designed to provide digital safety monitoring for child
 
 ## Features
 
--   **Parent Registration Page (New/Updated)**:
+-   **Parent Registration Page**:
     -   **Parent Gmail Authentication**: Secure login for parents using their Google account.
     -   **PIN Protection**: Set and verify a 4-digit PIN to secure access to settings. The PIN setup option is hidden once a PIN is set, and the Google Sign-in button is hidden if a parent is already registered with a PIN.
     -   **Per-Child-Profile Configuration**: Restricted URLs and custom messages are configured for the *currently logged-in Chrome user's Gmail ID (the child's profile)*. The child's Gmail ID is displayed as non-editable text.
@@ -12,11 +12,11 @@ This Chrome extension is designed to provide digital safety monitoring for child
     -   **URL Export/Import**: Easily export your list of restricted URLs to a `.txt` or `.csv` file, and import URLs from such files, allowing for backup and quick setup across profiles.
     -   **Custom Block Message**: Set a personalized message to be displayed to the child when a restricted site is accessed.
 
--   **Child Browsing Monitoring (Updated)**:
+-   **Child Browsing Monitoring**:
     -   **Site Blocking**: Automatically blocks access to URLs specified by the parent if the logged-in user is a registered child.
-    -   **Enhanced Blocked Page (New)**: When a site is blocked, a dedicated `blocked.html` page is displayed with the parent's custom message, a randomly selected fun message, and a visually engaging, professional yet fun dark theme. Includes a placeholder for a funny image (`images/funny_blocked.png` - *requires the user to add this image file*).
+    -   **Enhanced Blocked Page**: When a site is blocked, a dedicated `blocked.html` page is displayed with the parent's custom message, a randomly selected fun message, and a visually engaging, professional yet fun dark theme. Includes a placeholder for a funny image (`images/funny_blocked.png` - *requires the user to add this image file*).
 
--   **Child Browsing Dashboard (Updated)**:
+-   **Child Browsing Dashboard**:
     -   **PIN Protected Access**: Dashboard access is protected by the same PIN set on the registration page.
     -   **Comprehensive History**: Displays the browsing history (allowed and blocked sites) of the child user in a clear, fixed-width, scrollable table.
     -   **Dynamic Grouping**: Logs are grouped by customizable time periods (e.g., Today, Last 7 Days, This Month, All Time), with group headers only appearing if there is data for that group. "Last 7 Days" is the default view.
@@ -25,7 +25,6 @@ This Chrome extension is designed to provide digital safety monitoring for child
     -   **URL Copy Option**: Truncated long URLs can be fully copied to the clipboard.
     -   **Clear History**: Option to clear all browsing history data stored by the extension.
     -   **Save History**: Option to save browsing history to a CSV file for external review.
-    -   **Professional Theme**: Applied a clean, professional visual theme for better readability and user experience.
 
 -   **User-Based Access Control**:
     -   The extension intelligently identifies the logged-in Chrome user. If the user is a registered child, restrictions apply. If it's the parent, they can browse freely without restrictions (within their own profile) and access settings/dashboard.
@@ -100,10 +99,6 @@ To view the browsing history for a child:
 2.  Open the Digital Safety Monitor extension popup and click "Child Browsing Dashboard."
 3.  **Enter the PIN** you set during parent configuration for this profile to access the dashboard.
 4.  On the dashboard, you can view the browsing history, clear it, or save it as a CSV file.
-
-## Development
-
-Instructions for development and debugging will be added here.
 
 ## Contributing
 
